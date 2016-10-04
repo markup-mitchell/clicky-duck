@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+<SCRIPT>
+    function imgChange(el,soundfile)
+    {
+    document.getElementById("over").style.display="block";
+    document.getElementById("img1").src="duck2.png";
+        if (el.mp3) {
+        if(el.mp3.paused) el.mp3.play();
+        else el.mp3.pause();
+    } else {
+        el.mp3 = new Audio(soundfile);
+        el.mp3.play();
+    }
+    setTimeout(function() {
+    document.getElementById("over").style.display="none";
+    document.getElementById("imgtip").innerHTML="";
+    document.getElementById("img1").src="duck1.png";
+    }, 600);
+    }
+
+</SCRIPT>
+
+<link rel="stylesheet" type="text/css" href="style_duck.css" />
+
+
+</head>
+<body bgcolor="#000000">
+<div id="img"><div id='imgtip'></div><img id="img1" src="duck1.png" onclick="imgChange(this, '34534%5Equack.mp3');" style="cursor:pointer;" /></div>
+
+<div id="embed"></div>
+
+<div id="over" style="display:none;position:fixed;top:0px;width:100%;height:100%;"></div>
+
+</body bgcolor="#000000">
+
+
+</html>
