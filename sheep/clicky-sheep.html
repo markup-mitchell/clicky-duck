@@ -9,7 +9,7 @@
     function imgChange(el,soundfile)
     {
     document.getElementById("over").style.display="block";
-    document.getElementById("img1").src="sheep1.png";
+    document.getElementById("img1").src="sheep2.png";
         if (el.mp3) {
         if(el.mp3.paused) el.mp3.play();
         else el.mp3.pause();
@@ -20,7 +20,7 @@
     setTimeout(function() {
     document.getElementById("over").style.display="none";
     document.getElementById("imgtip").innerHTML="";
-    document.getElementById("img1").src="sheep2.png";
+    document.getElementById("img1").src="sheep1.png";
     }, 600);
     }
 
